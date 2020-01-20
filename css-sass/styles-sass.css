@@ -1,0 +1,98 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: none;
+  text-decoration: none; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #030521;
+  font-size: 15px; }
+
+.container {
+  width: 70%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 0 auto; }
+
+.post-recipes {
+  border-top: solid 1px grey;
+  display: flex;
+  padding: 16px 0; }
+  .post-recipes .post-img {
+    padding: 0 10px 0 0; }
+    .post-recipes .post-img img {
+      width: 270px;
+      height: 190px;
+      border-radius: 45px; }
+  .post-recipes .recipes-info {
+    width: 100%; }
+    .post-recipes .recipes-info .post-data {
+      display: flex;
+      justify-content: space-between; }
+      .post-recipes .recipes-info .post-data .post-user {
+        display: flex; }
+        .post-recipes .recipes-info .post-data .post-user p:nth-child(1) {
+          padding: 0 10px 0 0;
+          border-right: solid black 1px; }
+        .post-recipes .recipes-info .post-data .post-user p:nth-child(2) {
+          padding: 0 0 0 10px; }
+      .post-recipes .recipes-info .post-data .post-engagement {
+        flex-direction: row; }
+        .post-recipes .recipes-info .post-data .post-engagement a {
+          margin: 0 5px 0 0;
+          font-size: 10px; }
+    .post-recipes .recipes-info .post-details p:nth-child(1) {
+      margin: 30px 10px 0 0;
+      font-size: 20px;
+      font-weight: bold; }
+    .post-recipes .recipes-info .post-details p:nth-child(2) {
+      margin: 10px 10px 0 0;
+      font-size: 15px; }
+    .post-recipes .recipes-info .post-details .post-btn {
+      width: 126px;
+      padding: 5px 0;
+      margin: 20px 0 0 0;
+      background-color: #f1a7e5;
+      border-radius: 10px;
+      text-align: center; }
+      .post-recipes .recipes-info .post-details .post-btn a {
+        font-size: 11px; }
+
+@media only screen and (max-width: 500px) {
+  .post-recipes {
+    border-top: none; }
+    .post-recipes .post-img img {
+      display: none; }
+    .post-recipes .delicias-dulces .recipes-info {
+      display: flex;
+      justify-content: center;
+      flex-direction: column; }
+      .post-recipes .delicias-dulces .recipes-info .post-data .post-user p {
+        font-size: 13px; }
+      .post-recipes .delicias-dulces .recipes-info .post-data .post-engagement a {
+        font-weight: normal;
+        font-size: 13px; }
+      .post-recipes .delicias-dulces .recipes-info .post-details {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center; }
+  .comidas-simples {
+    display: none; } }

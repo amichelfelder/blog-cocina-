@@ -1,0 +1,123 @@
+.post-recipes{
+    border-top: solid 1px grey;
+    display: flex;
+    padding: 16px 0;
+    .post-img{
+        padding: 0 10px 0 0;
+        img{
+            width: 270px;
+            height: 190px;
+            border-radius: 45px;
+        }
+    }
+    .recipes-info{
+        width: 100%;
+        .post-data {
+            display: flex;
+            justify-content: space-between;
+            .post-user{
+                display: flex;
+                p:nth-child(1){
+                    padding: 0 10px 0 0;
+                    border-right: solid black 1px;
+                }
+                p:nth-child(2){
+                    padding: 0 0 0 10px;
+                }
+                
+            }
+            .post-engagement{
+                flex-direction: row;
+                a{
+                    margin: 0 5px 0 0; 
+                    font-size: 10px
+                }
+            }
+            
+            
+        }
+        .post-details{
+        p:nth-child(1){
+            margin: 30px 10px 0 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        
+        p:nth-child(2){
+            margin: 10px 10px 0 0;
+            font-size: 15px;
+            
+        }
+        
+        .post-btn{
+            width: 126px;
+            padding: 5px 0;
+            margin: 20px 0 0 0;
+            background-color: $color-btn;
+            border-radius: 10px;
+            text-align: center;
+            a{
+                font-size: 11px;
+            }
+        
+        }
+    }
+       
+        
+    }
+    
+}
+
+@media only screen and (max-width: 500px)  {
+    .post-recipes {        
+        border-top: none;
+      
+        .post-img { 
+            img{
+                display:none;
+                 }
+            }
+        
+        .delicias-dulces {
+            
+            .recipes-info{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                .post-data {
+
+                    .post-user p{
+                        font-size: 13px;
+                        } 
+                    .post-engagement a{
+                        font-weight: normal;
+                        font-size: 13px;   
+                                    }
+                    
+                        }
+                .post-details {
+                display: flex;
+                text-align: center;
+                flex-direction: column;
+                 align-items: center;
+                                    }
+                    }
+                }
+         
+            
+}
+
+.comidas-simples {
+    display: none;
+           }
+}
+  
+
+
+    
+
+
+
+

@@ -1,0 +1,412 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    list-style: none;
+    text-decoration: none
+}
+
+body {
+    margin: 0;
+    color: #030521;
+    font-family: 'IBM Plex Mono', monospace; 
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+a {
+    font-weight: bold;
+    color: #030521;
+}
+
+.header-logo {
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.header-logo a {
+    font-family: 'Indie Flower', cursive;
+    color: #FA7855;
+    text-decoration: none;
+    font-size: 4em;
+}
+
+.main-menu {
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main-menu ul li {
+    display: inline;
+    padding: 30px;
+    position: relative;
+}
+
+.main-menu .item-desplegable ul {
+    display: none;
+    width: 135px;
+    background-color: #f8f8f8;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 4em;
+}
+
+.main-menu .item-desplegable ul li {
+    width: 100%;
+    float: left;
+    padding: 1em 0;
+    margin: 0;
+}
+
+.main-menu .item-desplegable:hover ul {
+    display: block;
+    animation: menuhover 0.2s linear;
+}
+
+.main-menu a {
+    color: #928984;
+    text-decoration: none;
+}
+
+.main-menu a:hover {
+    color: #FA7855;
+    transition: 0.5s;
+}
+
+@keyframes menuhover {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hide-gt-xs{
+    display: none;
+}
+
+@media screen and (max-width:1200px){
+    .main-menu .item-desplegable ul {
+        display: none;
+        background-color: #FA7855;
+        position: relative;
+        z-index: 99;
+        float: left;
+    }
+}
+
+@media screen and (max-width:992px){
+    .main-menu .item-desplegable ul {
+        display: none;
+        background-color: #FA7855;
+        position: relative;
+        z-index: 99;
+        float: left;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .hide-gt-xs{
+        display: block
+    }
+    .menu-items {
+        display: none;
+        background-color: #FA7855;
+        margin: 0 auto;
+        width: 30%;
+
+
+    }
+    .main-menu:hover .menu-items{
+        display: block;
+        padding: 1rem;
+
+    }
+    .menu-responsive {
+        background-color: #FA7855;
+        border-radius: 15px;
+        width: 50%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .menu-responsive p {
+        margin: 0;
+        color: white;
+    }
+
+    .main-menu {
+        margin: 15px 0;
+    }
+
+    .main-menu a {
+        color: #ffffff
+    }
+
+    .main-menu ul li {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        padding: 10px 0;
+    }
+
+    .main-menu .item-desplegable ul {
+        display: none;
+        position: relative;
+        z-index: 99;
+        float: left;
+        font-size: 0.8rem;
+    }
+
+    .main-menu .item-desplegable ul li {
+        padding: 0.2rem 0;
+    }
+
+    .main-menu .item-desplegable:hover ul {
+        background-color: rgba(255, 255, 255, 0.5);
+        position: relative;
+        z-index: 99;
+        float: left;
+        display: block;
+        width: 100%;
+        top: 0;
+        animation: grow 0.2s linear;
+    }
+
+    @keyframes grow { 
+        from {
+            height: 0;
+            overflow: hidden;
+        }
+        to {
+            height: 70px;
+        } 
+    }
+    
+    .main-menu a:hover {
+        transition: 0.5s;
+        opacity: 0.5;
+        color: #ffffff;
+    }
+}
+
+.banner .banner-img{
+    width:100%;
+    margin:20px 0 0 0;
+}
+
+.container {
+    overflow: hidden;
+    width: 70%;
+    min-width: 500px;
+    max-width: 900px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-content: center;
+    margin: 10vh auto;
+}
+
+ul.breadcrumb {
+    display: inline-flex;
+}
+  
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+  
+ul.breadcrumb li:hover a, ul.breadcrumb li:hover a i {
+    color: #FA7855;
+    text-decoration: underline;
+}
+
+.recipe-header {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.social-media li {
+    width:40px;
+    overflow:hidden;
+    margin: 5px;
+}
+
+.social-media li img {
+    width:100%;
+}
+
+.recipe-img {
+    width:50%;
+    min-width: 250px;
+    max-width: 450px;
+    overflow:hidden;
+    margin: 0 5px;
+}
+
+.recipe-img img {
+    width:100%;
+    height: auto;
+    border-radius:50px;
+}
+
+.article-container {
+    width:50%;
+    color:darkgray;
+    margin: 0 auto;
+}
+
+.post-data .post-engagement {
+    margin: 15px 0;
+}
+
+.post-data .post-engagement a i {
+    color:darkgray;
+}
+
+.post-data .post-engagement a span {
+    color:darkgray;
+}
+
+.post-data {
+    display:flex;
+    justify-content: space-between;
+    margin: 10px 0 10px 40px;
+}
+
+.post-user {
+    display:flex;
+}
+
+.post-user p:nth-child(1){
+    padding: 0 10px 0 0;
+    border-right: solid darkgray 1px;
+}
+
+.post-user p:nth-child(2){
+    padding: 0 0 0 10px;
+}
+
+.post {
+    margin: 10px 0 10px 40px;
+}
+
+.post-title {
+   color:black;
+   font-size:30px;
+   font-weight:bold;
+   margin:15px 5px; 
+}
+
+.inspirational-quote {
+    color:black;
+    border-left:solid 1px #FA7855;
+    padding:5px 15px;
+    margin: 15px 0;
+}
+
+.inspirational-quote span{
+    display:block;
+    margin: 15px 0 0 0;
+    color:darkgray;
+}
+
+.ingredients-list li::before {
+    content: "•"; 
+    color: #FA7855;
+    display: inline-block; 
+    width: 1em;
+}
+
+.footer{
+    flex-direction:row;
+    justify-content: space-between;    
+    border-bottom: solid 1px darkgray;
+}
+
+.footer a{
+    margin: 20px 15px;
+    color: darkgray;
+    text-transform: uppercase;
+}
+
+.footer a img{
+    margin: 0 5px 0 0;
+}
+
+/*responsive desde breadcrum hasta el final*/
+@media screen and (max-width:768px){
+                 
+    .container {
+        width: 95%;
+        min-width: 100px;
+        max-width: 690px;
+    }
+    
+    .recipe-header {
+        flex-direction:column;
+    }
+    
+    .social-media {
+        display:flex;
+        justify-content: space-evenly;
+        width:95%;
+        min-width: 100px;
+        max-width: 690px;
+    }
+
+    .recipe-img {
+        width:95%;
+        min-width: 100px;
+        max-width: 690px;
+    }
+    
+    .article-container {
+        width:95%;
+        min-width: 100px;
+        max-width: 690px; 
+    }
+    
+    .post-data {
+        margin: 10px 0 10px 0px;
+    }
+
+    .post {
+        margin: 10px 0 10px 0px;
+    }
+    
+    .footer span{
+        display:none;  
+    }
+}

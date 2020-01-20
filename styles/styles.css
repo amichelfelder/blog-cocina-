@@ -1,0 +1,657 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    list-style: none;
+    text-decoration: none
+}
+
+body{
+    margin:0;
+    font-family: 'IBM Plex Mono', monospace; /*esto sissi no lo tiene pero cecilia necesita, ver si se puede optimizar*/
+    color: #030521;
+    font-size: 15px;
+    box-sizing: border-box; /*Esto estaba en el de sissi, veamos si afecta a otras cosas*/
+}
+
+a {
+    font-weight: bold;
+    color: #030521;
+}
+
+.header-logo {
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.header-logo a {
+    font-family: 'Indie Flower', cursive;
+    color: #FA7855;
+    text-decoration: none;
+    font-size: 4em;
+}
+
+.main-menu {
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.main-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main-menu ul li {
+    display: inline;
+    padding: 30px;
+    position: relative;
+}
+
+.item-desplegable{
+    z-index: 999;
+}
+
+.main-menu .item-desplegable ul {
+    display: none;
+    width: 135px;
+    background-color: #f8f8f8;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 4em;
+}
+
+.main-menu .item-desplegable ul li {
+    width: 100%;
+    float: left;
+    padding: 1em 0;
+    margin: 0;
+}
+
+.main-menu .item-desplegable:hover ul {
+    display: block;
+    animation: menuhover 0.2s linear;
+}
+
+.main-menu a {
+    color: #928984;
+    text-decoration: none;
+}
+
+.main-menu a:hover {
+    color: #FA7855;
+    transition: 0.5s;
+}
+
+@keyframes menuhover {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: -2.6%;
+    width: calc(100% + 5.25%);
+}
+
+.carousel-image {
+    width: 100%;
+    float: left;
+}
+
+.carousel-content {
+    position: relative;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+.carousel-image-container {
+    width: 20%;
+    float: left;
+    margin: 2.5%;
+}
+
+/* animacion */
+
+.carousel-image-container .carousel-hover {
+    background-color: rgba(240, 163, 163, 0.7);
+    bottom: -200px;
+    opacity: 0;
+    transition: all 0.3s ease-out 0.5s;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1em;
+    overflow: hidden;
+}
+
+.carousel-image-container h2 {
+    transform: translateY(-200px);
+    transition: all 0.2s ease-in-out 0.1s;
+    font-family: 'IBM Plex Mono', monospace;
+    color: rgb(240, 233, 233);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel-image-container p {
+    color: rgb(240, 233, 233);
+    transform: translateY(-200px);
+    transition: all 0.2s ease-in-out 0.2s;
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center
+}
+
+.carousel-image-container a.mas {
+    transform: translateY(-200px);
+    transition: all 0.2s ease-in-out 0.3s;
+    font-family: 'IBM Plex Mono', monospace;
+    color: rgb(240, 233, 233);
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    border-bottom-color: rgb(240, 233, 233);
+}
+
+.carousel-image-container:hover .carousel-hover {
+    opacity: 1;
+    bottom: 0px;
+    transition-delay: 0s;
+    animation: bounceY 0.9s linear;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-image-container h2 {
+    font-size: 1.4em;
+}
+
+.carousel-image-container:hover h2 {
+    transform: translateY(0px);
+    transition-delay: 0.4s;
+}
+
+.carousel-image-container:hover p {
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+}
+
+.carousel-image-container:hover a.mas {
+    transform: translateY(0px);
+    transition-delay: 0s;
+}
+
+@keyframes bounceY {
+    0% {
+        transform: translateY(-155px);
+    }
+    40% {
+        transform: translateY(-100px);
+    }
+    65% {
+        transform: translateY(-52px);
+    }
+    82% {
+        transform: translateY(-25px);
+    }
+    92% {
+        transform: translateY(-12px);
+    }
+    55%, 75%, 87%, 97%, 100% {
+        transform: translateY(0px);
+    }
+}
+
+.hide-gt-xs{
+    display: none;
+}
+@media screen and (max-width:1200px){
+    .carousel-image-container {
+        width: 30%;
+        float: left;
+        margin: 1.5%;
+        
+    }
+    .hide-md{
+        display: none;
+    }
+    .carousel-image-container h2 {
+        font-size: 1.4em;
+    }
+}
+@media screen and (max-width:992px){
+    .carousel-image-container {
+        width: 45%;
+        float: left;
+        margin: 2.5%;
+    }
+    .hide-sm{
+        display: none;
+    }
+}
+@media screen and (max-width:768px) {
+    .hide-xs{
+        display: none;
+    }
+    .carousel-image-container {
+        width: 100%;
+        float: left;
+        margin: 0;
+    }
+    .hide-gt-xs{
+        display: block
+    }
+    .menu-items {
+        display: none;
+        background-color: #FA7855;
+        margin: 0 auto;
+        width: 30%;
+
+
+    }
+    .main-menu:hover .menu-items{
+        display: block;
+        padding: 1rem;
+
+    }
+    .menu-responsive {
+        background-color: #FA7855;
+        border-radius: 15px;
+        width: 50%;
+        margin: 0 auto;
+        padding: 10px;
+
+    }
+    .menu-responsive p {
+        margin: 0;
+        color: white;
+    }
+    .main-menu {
+        margin: 15px 0;
+    }
+    .main-menu a {
+        color: #ffffff
+    }
+    .main-menu ul li {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        padding: 10px 0;
+    }
+    .main-menu .item-desplegable ul {
+        display: none;
+        position: relative;
+        z-index: 99;
+        float: left;
+        font-size: 0.8rem;
+
+    }
+    .main-menu .item-desplegable ul li {
+        padding: 0.2rem 0;
+    }
+    .main-menu .item-desplegable:hover ul {
+
+        background-color: rgba(255, 255, 255, 0.5);
+        position: relative;
+        z-index: 99;
+        float: left;
+        display: block;
+        width: 100%;
+        top: 0;
+        animation: grow 0.2s linear;
+    }
+    @keyframes grow { 
+        from {
+            height: 0;
+            overflow: hidden;
+        }
+        to {
+            height: 70px;
+        } 
+    }
+    
+    .main-menu a:hover {
+        transition: 0.5s;
+        opacity: 0.5;
+        color: #ffffff;
+    }
+}
+
+
+.container {
+    margin: 20px auto;
+    overflow: hidden;
+    width: 70%;
+    min-width: 500px;
+    max-width: 900px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.category {
+    width:33%;
+    min-width: 165px;
+    max-width: 300px;
+    overflow:hidden;
+    position:relative;
+}
+
+.category.about-me {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.category-img{
+    width:100%;
+    border-radius: 30px;
+    height: auto;
+    transition: all, 1s, ease-out;
+}
+
+.category-me{
+    width:80%;
+    border-radius: 100%;
+    margin:10px;
+}
+
+.button-1 {
+    position:absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    display: block;
+    border: 1px solid white;
+    border-radius:30px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+    width: 60%;
+    min-width: 50px;
+    line-height: 100%;
+    background-color: white;
+    transition: all, 1s, ease-out;
+}
+
+.category:hover .button-1 {
+    border: 1px solid #fa7855;
+    background-color: #fa7855;
+}
+
+.category:hover .category-img {
+    opacity:0.3;
+}
+
+.column-1 {
+    width: 66%;
+    min-width: 330px;
+    max-width: 600px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.column-2 {
+    width:33%;
+    min-width: 165px;
+    max-width: 300px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.article-container {
+    width:100%;
+    display:inline-block;
+}
+
+.article-container iframe {
+    width:100%;
+}
+
+.article-container .caption{
+    font-size:12px; 
+    text-align:left; 
+    color:darkgray;
+}
+
+.button-2 {
+    display: block;
+    border: 1px solid #fde2da;
+    text-align: center;
+    font-size: 12px;
+    font-weight:bold;
+    text-transform: uppercase;
+    padding: 10px;
+    width: 90%;
+    line-height: 100%;
+    background-color:#fde2da;
+    transition: all, 1s, ease-out;
+}
+
+.button-2:hover {
+    border: 1px solid #fa7855;
+    background-color: #fa7855;
+}
+
+.post-details .button-2 {
+    width: 40%;
+    border-radius: 12px;
+    text-transform:none;
+}
+
+.article-title {
+    text-align: center;
+    margin:10px 5px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.post-details .article-title {
+    text-align:left;
+}
+
+.article-description {
+    display:block;
+    font-size: 12px;
+    color:darkgray;
+    text-align: justify;
+    margin:10px 5px;
+}
+
+.recipes{
+    border-top: solid 1px darkgray;
+    display: flex;
+    padding: 20px 0 0 0;
+    margin-top: 20px;
+}
+
+.recipes .recipe-img{
+    padding: 0 10px 0 0;
+    width:45%;
+    max-height:190px;
+    border-radius: 45px; 
+}
+
+.recipes .post-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-user{
+    display: flex;
+    font-size:12px;
+    color:darkgray;
+}
+
+.post-user p:nth-child(1){
+    padding: 0 10px 0 0;
+    border-right: solid darkgray 1px;
+}
+
+.post-user p:nth-child(2){
+    padding: 0 0 0 10px;
+}
+
+.post-engagement{
+    flex-direction: row;
+}
+
+.post-engagement a{
+    margin: 0 5px 0 0; 
+    font-size: 12px;
+    color:darkgray;
+}
+
+.post-details .article-description {
+    margin: 10px 0;
+}
+
+/* footer */
+.footer{
+    display: flex;
+    justify-content: space-between;    
+    border-bottom: solid 1px darkgray;
+}
+
+.footer a{
+    margin: 20px 15px;
+    color: darkgray;
+    text-transform: uppercase;
+}
+
+.footer a img{
+    margin: 0 5px 0 0;
+}
+
+@media only screen and (max-width: 768px)  {
+
+    .container {
+        width:95%;
+        min-width: 100px;
+        max-width: 690px;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .category {
+        width:95%;
+        min-width: 100px;
+        max-width: 690px;
+        text-align:center;
+        overflow:hidden;
+    }
+    
+    .category:hover .button-1 {
+        top:0;
+        left: 0; 
+        transform: translate(0,0); 
+        border: none;
+        background-color:white;
+        border-radius:0;
+        text-align:left;
+    }
+    
+    .category:hover .category-img {
+        opacity:0;
+    }   
+
+    .article-container iframe, .article-container .caption {
+        display:none;
+    }
+
+    .column-1, .column-2 {
+        width:95%;
+        min-width: 100px;
+        max-width: 690px;
+        margin:20px auto;
+        align-items:center;
+    }
+           
+    .button-2 {
+        width:100%;
+    }
+
+    .category-me {
+        width:60%;
+    }
+
+    .recipes {
+        border-top: none;
+        width:95%;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+
+   .recipe-1 .recipe-img{
+        display:none;
+    }
+
+    .recipe-1 .post-user p{
+        font-size: 12px;
+    }
+
+    .recipe-1 .post-engagement a{
+        font-weight: normal;
+        font-size: 12px;      
+    }
+
+    .recipe-1 .post-details {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .recipe-2 {
+        display: none;
+    }
+
+    .container.footer {
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+    }
+
+    .footer span{
+        display:none;  
+    }
+ }
